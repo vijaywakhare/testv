@@ -1,0 +1,434 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="dist/css/bootstrap.css">
+		<link rel="stylesheet" href="dist/fa/css/font-awesome.css">
+		<script src="dist/js/jquery.min.js"></script>
+		<script src="dist/js/bootstrap.js"></script>
+		<script>
+			$(function(){
+				$(".userinput").blur(function(){
+					var input = $(this).val().trim();
+					if(input == "")
+					{
+						if($(this).nextAll().nextAll().length == 0)
+						{
+							$(this).after("<i> This field is required </i>");
+							$(this).css({"border":"1px solid red"});
+							$(this).next().css({"color":"red"});
+						}
+					}
+					else
+					{
+						$(this).nextAll().remove();
+						$(this).css({"border":"1px solid green"});
+					}
+				});
+			});
+			function ltest()
+			{
+				//l email validation
+				var lemail = $("#lemail").val().trim();
+				if (lemail == "")
+				{
+					$("#lemail").css({"border":"1px solid red"});
+					$("#lemailerror").html("This field is required");
+				}
+				else
+				{
+					$("#lemail").css({"border":"1px solid green"});
+					$("#lemailerror").html("");
+				}
+				//l password validation
+				var lpass = $("#lpass").val().trim();
+				if(lpass == "")
+				{
+					$("#lpass").css({"border":"1px solid red"});
+					$("#lpasserror").html("This field is required");
+				}
+				else
+				{
+					$("#lpass").css({"border":"1px solid green"});
+					$("#lpasserror").html("");
+				}
+			};
+			function rtest()
+			{
+				//name validation
+				var fname = $("#fname").val().trim();
+				if (fname == "")
+				{
+					$("#fname").css({"border":"1px solid red"});
+					$("#nameerror").html("This field is required");
+				}
+				else
+				{
+					$("#fname").css({"border":"1px solid green"});
+					$("#nameerror").html("");
+				}
+				//email validation
+				var email = $("#email").val().trim();
+				if (email == "")
+				{
+					$("#email").css({"border":"1px solid red"});
+					$("#emailerror").html("This field is required");
+				}
+				else
+				{
+					$("#email").css({"border":"1px solid green"});
+					$("#emailerror").html("");
+				}
+				//mobile validation
+				var mobile = $("#mobile").val().trim();
+				if ( (mobile == "") || (mobile.length<10) || (isNaN(mobile)) )
+				{
+					$("#mobile").css({"border":"1px solid red"});
+					$("#mobileerror").html("This field is required");
+				}
+				else
+				{
+					$("#mobile").css({"border":"1px solid green"});
+					$("#mobileerror").html("");
+				}
+				//password validation
+				var upass = $("#upass").val().trim();
+				if(upass == "")
+				{
+					$("#upass").css({"border":"1px solid red"});
+					$("#upasserror").html("This field is required");
+				}
+				else
+				{
+					$("#upass").css({"border":"1px solid green"});
+					$("#upasserror").html("");
+				}
+				//address validation
+				var address = $("#address").val().trim();
+				if (email == "")
+				{
+					$("#address").css({"border":"1px solid red"});
+					$("#addresserror").html("This field is required");
+				}
+				else
+				{
+					$("#address").css({"border":"1px solid green"});
+					$("#addresserror").html("");
+				}
+			};
+		</script>
+	</head>
+	
+	<body>
+		<div class="container-fluid fullw">
+			<img src="1.jpg" class="img-responsive" width="100%">
+		</div><!-- container-fluid end-->
+		<br>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="row text-center">
+						<a href="#" data-toggle="modal" data-target="#signup">
+							<br>
+							<div class="topmc">
+								<img src="2.png" class="img-responsive">
+							</div>
+							<br>
+							<h5 class="abcd"><b>7% CASHBACK ON CAB RIDE</b></h5>
+							<p class="abc">Valid on Ola & Uber</p>
+						</a>
+					</div><!-- 1row end-->
+					<div class="row text-center">
+						<a href="#" data-toggle="modal" data-target="#signup">
+							<br>
+							<div class="topmc">
+								<img src="3.png" class="img-responsive">
+							</div>
+							<h5 class="abcd"><b>FREE DELIVERY ON ALL FOOD ORDERS</b></h5>
+							<p class="abc">Valid on Swiggy, Zomato & Others</p>
+						</a>
+					</div><!-- 2row end-->
+					<div class="row text-center">
+							<a href="#" data-toggle="modal" data-target="#signup">
+								<br>
+								<div class="botmc">
+									<img src="4.png" class="img-responsive">
+								</div>
+								<br>
+								<h5 class="abcd"><b>UPTO 3 MONTHS FREE SPUUL PREMIMUM SUBCRIPTION</b></h5>
+							</a>
+						</div><!-- 3row end-->
+				</div><!--col-sm-6 end-->
+				<div class="col-sm-6">
+						<div class="row">
+							<br>
+							<a href="#" data-toggle="modal" data-target="#signup">
+								<img src="5.jpg" class="img-responsive bbb" width="100%">
+							</a>
+							<br>
+							<p class="text-center abc ccc">4000+ Bollywood Movies for Free Stream, Watch, Download Movies & TV Series</p>
+						</div><!-- 1row end-->
+						<div class="row csetbym">
+							<br>
+							<p class="abc aaa"><i class="fa fa-check checkcolor"></i>  Maximum Cashback</p>
+							<p class="abc aaa"><i class="fa fa-check checkcolor"></i>  Huge Monthly Saving</p>
+							<p class="abc aaa"><i class="fa fa-check checkcolor"></i>  No Coupon Code Required</p>
+						</div><!-- 2row end-->
+						<br>
+				</div><!--col-sm-6 end-->
+			</div><!--row end-->
+			<hr>
+			
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="row">
+						<div class="col-sm-12">
+						<a href="#" data-toggle="modal" data-target="#signup">
+								<div class="media">
+									<div class="media-left">
+										<img src="6.png" class="media-object lastmc" style="width:120px">
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading abcd"><b> 10% CASHBACK ON BUS </b></h5>
+										<p class="abc">Valid on all bus booking</p>
+									</div>
+								</div><!--Media end-->
+							</a>
+							<hr>
+						</div><!-- col end-->
+					</div><!-- 1row end-->
+					<div class="row">
+						<div class="col-sm-12">
+							<a href="#" data-toggle="modal" data-target="#signup">
+								<div class="media">
+									<div class="media-left">
+										<img src="7.png" class="media-object lastmc" style="width:120px">
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading abcd"><b> 10% CASHBACK ON HOTELS </b></h5>
+										<p class="abc">Valid on both OYO & Cleartrip</p>
+									</div>
+								</div><!--Media end-->
+							</a>
+							<hr>
+						</div><!-- col end-->
+					</div><!-- 2row end-->
+					<div class="row">
+						<div class="col-sm-12">
+							<a href="#" data-toggle="modal" data-target="#signup">
+								<div class="media">
+									<div class="media-left">
+										<img src="8.png" class="media-object lastmc" style="width:120px">
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading abcd"><b> 1% CASHBACK ON PREPAID </b></h5>
+										<p class="abc">Valid on All Operators (except Airtel)</p>
+									</div>
+								</div><!--Media end-->
+							</a>
+							<hr>
+						</div><!-- col end-->
+					</div><!-- 3row end-->
+					<div class="row">
+						<div class="col-sm-12">
+							<a href="#" data-toggle="modal" data-target="#signup">
+								<div class="media">
+									<div class="media-left">
+										<img src="9.png" class="media-object lastmc" style="width:120px">
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading abcd"><b> SAVE HALF CONVINENCE FEE </b></h5>
+										<p class="abc">Valid on Cleartrip, Yatra & Others</p>
+									</div>
+								</div><!--Media end-->
+							</a>
+							<hr>
+						</div><!-- col end-->
+					</div><!-- 4row end-->
+					<div class="row">
+						<div class="col-sm-12">
+							<a href="#" data-toggle="modal" data-target="#signup">
+								<div class="media">
+									<div class="media-left">
+										<img src="10.png" class="media-object lastmc" style="width:120px">
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading abcd"><b> 1% CASHBACK ON POSTPAID </b></h5>
+										<p class="abc">Valid on All Operators (except Airtel)</p>
+									</div>
+								</div><!--Media end-->
+							</a>
+							<hr>
+						</div><!-- col end-->
+					</div><!-- 5row end-->
+				</div><!--col-sm-6 end-->
+				<div class="col-sm-6">
+					<div class="row">
+						<div class="col-sm-12">
+							<a href="#" data-toggle="modal" data-target="#signup">
+								<div class="media">
+									<div class="media-left">
+										<img src="11.png" class="media-object lastmc" style="width:120px">
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading abcd"><b> 1% CASHBACK ON DTH </b></h5>
+										<p class="abc">Valid on All Operators (except Airtel)</p>
+									</div>
+								</div><!--Media end-->
+							</a>
+							<hr>
+						</div><!-- col end-->
+					</div><!-- 1row end-->
+					<div class="row">
+						<div class="col-sm-12">
+							<a href="#" data-toggle="modal" data-target="#signup">
+								<div class="media">
+									<div class="media-left">
+										<img src="12.png" class="media-object lastmc" style="width:120px">
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading abcd"><b> 7% CASHBACK ON ALL DEALS </b></h5>
+										<p class="abc">Valid on both Nearbuy & Little</p>
+									</div>
+								</div><!--Media end-->
+							</a>
+							<hr>
+						</div><!-- col end-->
+					</div><!-- 2row end-->
+					<div class="row">
+						<div class="col-sm-12">
+							<a href="#" data-toggle="modal" data-target="#signup">
+								<div class="media">
+									<div class="media-left">
+										<img src="13.png" class="media-object lastmc" style="width:120px">
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading abcd"><b> $125 CASHBACK ON HOME SERVICES </b></h5>
+										<p class="abc">Valid on all home services</p>
+									</div>
+								</div><!--Media end-->
+							</a>
+							<hr>
+						</div><!-- col end-->
+					</div><!-- 3row end-->
+					<div class="row">
+						<div class="col-sm-12">
+							<a href="#" data-toggle="modal" data-target="#signup">
+								<div class="media">
+									<div class="media-left">
+										<img src="14.png" class="media-object lastmc" style="width:120px">
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading abcd"><b> PRIORITY CUSTOMER SUPPORT </b></h5>
+										<p class="abc">Jump the support queue</p>
+									</div>
+								</div><!--Media end-->
+							</a>
+							<hr>
+						</div><!-- col end-->
+					</div><!-- 4row end-->
+					<div class="row">
+						<div class="col-sm-12">
+							<a href="#" data-toggle="modal" data-target="#signup">
+								<div class="media">
+									<div class="media-left">
+										<img src="15.png" class="media-object lastmc" style="width:120px">
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading abcd"><b> WIN EXCITING PRIZES </b></h5>
+										<p class="abc">Increase Chances To Winning Tapzo Lucky Contest</p>
+									</div>
+								</div><!--Media end-->
+							</a>
+							<hr>
+						</div><!-- col end-->
+					</div><!-- 5row end-->
+				</div><!--col-sm-6 end-->
+			</div><!--row end-->
+		</div><!-- container end-->
+		
+		<div class="container-fluid fullw">
+			<img src="16.jpg" class="img-responsive" width="100%">
+		</div><!-- container-fluid end-->
+		
+		<!-- Sign Up Modal Start-->
+		<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel"> Sign Up </h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="row form-group">
+					<div class="col-sm-6">
+						<input type="text" class="userinput form-control" placeholder="Enter Name *" id="fname">
+						<i id="nameerror" class="ired"></i>
+					</div>
+					<div class="col-sm-6">
+						<input type="text" class="userinput form-control" placeholder="Enter Mobile No. *" id="mobile">
+						<i id="mobileerror" class="ired"></i>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-6">
+						<input type="text" class="userinput form-control" placeholder="Enter Email Id *" id="email">
+						<i id="emailerror" class="ired"></i>
+					</div>
+					<div class="col-sm-6">
+						<input type="password" class="userinput form-control" placeholder="Password *" id="upass">
+						<i id="upasserror" class="ired"></i>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-12">
+						<textarea class="userinput form-control" placeholder="Enter Address" id="address"></textarea>
+						<i id="addresserror" class="ired"></i>
+					</div>
+				</div>
+			  </div><!--Signup body end-->
+			  <div class="modal-footer">
+			  <center>
+				<button type="button" class="btn btn-primary" onclick="rtest()">Register</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				<hr>
+				<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#login">Login</a>
+			  </center>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- Sign Up Modal End-->
+		<!--Login Modal start Here-->
+		<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+		  <div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel"> Login </h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="form-group">
+					<label> Email Id :</label><em class="emred">*</em>
+					<input type="text" class="userinput form-control input-sm" id="lemail">
+					<i id="lemailerror" class="ired"></i>
+				</div>
+				<div class="form-group">
+					<label> Password </label><em class="emred">*</em>
+					<input type="password" class="userinput form-control input-sm" id="lpass">
+					<i id="lpasserror" class="ired"></i>
+				</div>
+			  </div><!--Login body End-->
+			  <div class="modal-footer">
+				<center>
+				<button type="button" class="btn btn-primary" onclick="ltest()">Login</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				<hr>
+				<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signup">Register</a>
+			  </center>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!--Login Modal End Here-->
+	</body>
+</html>
